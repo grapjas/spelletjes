@@ -1,10 +1,10 @@
-# blad steen schaar (speler vs computer)
+# Schaar steen papier (speler vs computer)
 
 # https://stackoverflow.com/questions/3996904/generate-random-integers-between-0-and-9
 import random # random (willekeurig) getal voor de computer als ranking in keuzes lijst
 import bcolors as b # https://pypi.org/project/bcolors/
 
-keuzes = ["blad", "steen", "schaar"]  # een lijst met 3 string elementen 
+keuzes = ["schaar", "steen", "papier"]  # een lijst met 3 string elementen 
 
 def speler_input():
   speler = input("Uw zet: ")
@@ -26,9 +26,9 @@ def wie_wint():
       print("De computer had ook", computer, ", opnieuw!")
       continue  
     winnaar = 1 
-    if speler == "blad" and computer == "steen":
+    if speler == "papier" and computer == "steen":
       winnaar = 2
-    elif speler == "schaar" and computer == "blad":
+    elif speler == "schaar" and computer == "papier":
       winnaar = 2
     elif speler == "steen" and computer == "schaar":
       winnaar = 2
@@ -37,9 +37,9 @@ def wie_wint():
 
 intro = "Welkom bij blad-steen-schaar, 1v1 de computer 🤖\n"
 intro += "Je kan kiezen uit:\n"
-intro += "    \U0001F91A  blad\n"
-intro += "    \U0001F44A  steen\n" 
 intro += "    \U0001F596  schaar\n"
+intro += "    \U0001F44A  steen\n" 
+intro += "    \U0001F91A  papier\n"
 print(intro) 
 
 # kies de winnaar ...
@@ -49,7 +49,7 @@ print(intro)
 
 # emojis["blad"] geeft "\U...."
 emojis = {
-  "blad": "\U0001F91A",
+  "papier": "\U0001F91A",
   "steen": "\U0001F44A", 
   "schaar": "\U0001F596"
 }
